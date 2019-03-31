@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CIB W78</title>
+    <!-- <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+     <link rel="icon" type="image/gif" href="assets/images/cib_logo.png" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="bower_components/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" href="bower_components/nivo-lightbox/nivo-lightbox-theme.css">
+    <link rel="stylesheet" href="bower_components/countdown/jquery.countdown.css">
+
+    <link href="assets/css/grayscale.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+<style>
+ li { cursor: pointer; }
+</style>
+</head>
+
+<body data-spy="scroll">
+  <script type="text/javascript">
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+      } else {
+          document.getElementById("myBtn").style.display = "none";
+      }
+  }
+
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
+  </script>
+  <i onclick="topFunction()"  id="myBtn"  title="Go to top" class="fa fa-angle-double-up animated"></i>
+  <div class="popup">
+      <div class="close ns-close"></div>
+      <h6 class="popup-content"> Announcements </h6>
+      <hr>
+      <ul>
+
+          <!-- Copy paste this list tag to add more announcments -->
+          <!--<li> <p class="popup-content"><a class="js-scroll-trigger" href="" data-toggle="modal" data-target="#myModal">Click to check Scientific Committees</a>  </p></li>-->
+          <!--<li> <p class="popup-content">New Key Dates <a class="js-scroll-trigger" href="#Dates">Click to check Key Dates</a>  </p></li>-->
+            <li><a class="js-scroll-trigger" href="http://www.cvent.com/d/tgq3fs">Registration is now live</a></li>
+          <li><a class="js-scroll-trigger" href="Info_author.html">Final Submission Guidelines posted</a></li>
+          <li><a class="js-scroll-trigger" onclick="updateScroll('#speakers')">Full Paper notification sent </a></li>
+          <li><a class="js-scroll-trigger text-danger" onclick="updateScroll('#important-date')">View Key Dates</a></li>
+          <li class="flashit"><a class="js-scroll-trigger" onclick="updateScroll('#important-date')">More than 200 abstracts submitted<sup></sup></a></li>
+          <li><a class="js-scroll-trigger" onclick="updateScroll('#speakers')">Keynote Speakers </a></li>
+          <li><a class="js-scroll-trigger" href="call.html">Call for papers released</a></li>
+          <li><a class="js-scroll-trigger" href="" data-toggle="modal" data-target="#myModal">View
+              Scientific Committee</a></li>
+
+      </ul>
+  </div>
+<div id="home"></div>
+<nav id="site-nav" class="navbar navbar-fixed-top navbar-custom">
+    <div class="container">
+        <div class="navbar-header">
+
+            <!-- logo -->
+            <div class="site-branding">
+                <a class="logo" href="index.html">
+                    <!-- logo image  -->
+                    <img id="logo" src="assets/images/cib_logo.png" alt="logo">
+                  W78 2018 Conference
+                </a>
+            </div>
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items"
+                    aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div><!-- /.navbar-header -->
+
+        <div class="collapse navbar-collapse" id="navbar-items">
+            <ul class="nav navbar-nav navbar-right" style="margin-right:-50px; margin-top:10px;">
+
+                <!-- navigation menu -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li class="dropdown" id="organization--dropdown" ><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">General Information <span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+                             <li><a href="Info_author.html">Final Submission Guidelines</a></li>
+                             <li><a href="Registration.html">Registration</a></li>
+                              <li><a href="BIM_Workshop.html">BIM Workshop</a></li>
+                             <li><a href="#important-date">Key Dates</a></li>
+                              <li><a href="#speakers">Keynote Speakers</a></li>
+                               <li><a href="call.html">Proceedings</a></li>
+
+                               <li><a href="topics.html">Conference Topics</a></li>
+
+
+                           </ul>
+               </li>
+
+                <li><a href="#schedule">Schedule</a></li>
+
+
+                <li class="dropdown" id="organization--dropdown" ><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Organization <span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+
+
+                               <li><a href="#" data-toggle="modal" data-target="#myModal2">Organization Members</a></li>
+
+                               <li><a href="#" data-toggle="modal" data-target="#myModal">Scientific Committee</a></li>
+                           </ul>
+               </li>
+
+                <li><a href="#sponsorship">Sponsorship</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#venue1">Venue</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </div>
+    </div><!-- /.container -->
+</nav>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="text-danger" style="color: black"> Scientific Committee </h3>
+            </div>
+            <div class="modal-body" style="overflow-y: scroll;height: 300px">
+
+
+              <div style="width:50%; float:left;padding:10px;">
+                  <span style="font-size:14px;float:left; width:100%;">
+                  Ivan Mutis (Chair)
+                  </span>
+                  <span style="font-size:14px;float:left;width:100%;">
+                   Illinois Institute of Technology
+                  </span>
+                  <span style="font-size:14px;float:left;width:100%;">
+                  United States
+                  </span>
+              </div>
+
+              <div style="width:50%; float:left;padding:10px;">
+                  <span style="font-size:14px;float:left; width:100%;">
+                  Timo Hartmann (co-Chair)
+                  </span>
+                  <span style="font-size:14px;float:left;width:100%;">
+                   TU Berlin
+                  </span>
+                  <span style="font-size:14px;float:left;width:100%;">
+                  Germany
+                  </span>
+              </div>
+
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Robert Amor
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     University of Auckland
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    New Zealand
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Chimay Anumba
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                        University of Florida
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     David Arditi
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      Illinois Institute of Technology
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Steven Ayer
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Arizona State University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Jakob Beetz
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                        RWTH Aachen University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Germany
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Mario Berges
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                        Carnegie Mellon University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Frédéric Bosché
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Heriot-Watt University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United Kingdom
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Ioannis Brilakis
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      University of Cambridge
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United Kingdom
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Tomo Cerovsek
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                        University of Ljubljana
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                   Slovenia
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Jack Cheng
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      The Hong Kong University of Science and Technology
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Hong Kong
+                    </span>
+                </div>
+                 <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Fei Dai
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     West Virginia University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Nashwan Dawood
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     University of Teesside
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United Kingdom
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Bill East
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      Prairie Sky Consulting
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Charles Eastman
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      Georgia Institute of Technology
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Huseyin Attila Dikbas
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      Istanbul Medipol University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Turkey
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Tamer E El-Diraby
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      University of Toronto
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                   Canada
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Norah  El-Gohary
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      University of Illinois at Urbana-Champaign
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Semiha Ergan
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      New York University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Renate Fruchter
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Stanford University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Mani Golparvar-Fard
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     University of Illinois at Urbana-Champaign
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Guðni Guðnason
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Innovation Center Iceland
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                   Iceland
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Carl Haas
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     University of Waterloo
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                   Canada
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Amin Hammad
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Concordia Institute for Information Systems Engineering
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                   Canada
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Tarek Hassan
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Loughborough University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                   United Kingdom
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Patrick Hsieh
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     National Taiwan University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Taiwan
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    R. Raymond Issa
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      University of Florida
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Vineet Kamat
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      University of Michigan
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Arto Kiviniemi
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      University of Liverpool
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United Kingdom
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Christian Koch
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      Bauhaus-Universität Weimar
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Germany
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Markus König
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Ruhr-Universität Bochum
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Germany
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Iva Kovacic
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                        Vienna University of Technology
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Austria
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Thomas Krijnen
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      Technische Universiteit Eindhoven
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Netherlands
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     SangHyun Lee
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     University of Michigan
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Yong-Cheol Lee
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Louisiana State University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Fernanda Leite
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     University of Texas at Austin
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     HaiJiang Li
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Cardiff University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United Kingdom
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Ken-Yu Li
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    University of Washington
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Nan Li
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Tsinghua University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    China
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Ming Lu
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     University of Alberta
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Canada
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Xiaochun Luo
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     The Hong Kong Polytechnic University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Hong Kong
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Bob Martens
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Vienna University of Technology
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Austria
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Carol Menassa
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    University of Michigan
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    John Messner
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Pennsilvania State University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Sander van Nederveen
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     TU Delft
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Netherlands
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Dragana Nikolic
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    University of Reading
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United Kingdom
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Yaqub Rafiq
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Plymouth University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United Kingdom
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Yacine Rezgui
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Cardiff University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United Kingdom
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Rafael Sacks
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Technion - Israel Institute of Technology
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Israel
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Sergio Scheer
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Federal University of Parana
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Brazil
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Raimar Scherer
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Technical University Dresden
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Germany
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Ian Smith
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     École Polytechnique Fédérale de Lausanne
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Switzerland
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Lucio Soibelman
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     University of Southern California
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Ravi Srinivasan
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     University of Florida
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Pingbo Tang
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Arizona State University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Väino Tarandi
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     KTH, Royal Institute of Technology
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Sweden
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Walid Tizani
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     University of Nottingham
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United Kingdom
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Ziga Turk
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     University of Ljubljana
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Slovenia
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Yelda Turkan
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Oregon State University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Uwe Rüppel
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Technical University of Darmstadt
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Germany
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Léon van Berlo
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Netherlands Organisation for Applied Scientific Research
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Netherlands
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Xiangyu Wang
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Curtin University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Australia
+                    </span>
+                </div>
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Jennifer Whyte
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Imperial College London
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United Kingdom
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Nobuyoshi Yabuki
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Osaka University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Japan
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Alain Zarli
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Scientific and Technical Centre for Building
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    France
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Jiangsong Zhang
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Purdue University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Yimin Zhu
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     Louisiana State University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog modal-md">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="text-danger" style="color: black"> Organization Committee </h3>
+            </div>
+            <div class="modal-body" style="overflow-n: scroll;height: 300px">
+
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     David Aridit (Chair)
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                        Illinois Institute of Technology
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Bill East (Co-Chair)
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                        Prairie Sky Consulting
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+
+                 <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    Robert Amor
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                     University of Auckland
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    New Zealand
+                    </span>
+                </div>
+                 <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                     Jakob Beetz
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                        RWTH Aachen University
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    Germany
+                    </span>
+                </div>
+                <div style="width:50%; float:left;padding:10px;">
+                    <span style="font-size:14px;float:left; width:100%;">
+                    R. Raymond Issa
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                      University of Florida
+                    </span>
+                    <span style="font-size:14px;float:left;width:100%;">
+                    United States
+                    </span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--
+<header id="site-header" class="site-header valign-center">
+  <div class="intro">
+
+          <h2>01-03 October, 2018 / Chicago</h2>
+
+          <h1>35th CIB W78 2018 Conference </h1>
+
+          <p> IT in Design, Construction, and Management
+          Chicago, Illinois, United States</p>
+
+          <a class="btn btn-white inpage" href="#speakers">View Speakers</a>
+
+      </div>
+</header> -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+   <!-- Indicators -->
+   <ol class="carousel-indicators">
+     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+     <li data-target="#myCarousel" data-slide-to="1"></li>
+     <li data-target="#myCarousel" data-slide-to="2"></li>
+   </ol>
+
+   <!-- Wrapper for slides -->
+   <div class="carousel-inner">
+
+     <div class="item active">
+       <img src="assets/images/backgrounds/bg7.jpg" alt="Los Angeles" style="width:100%;">
+
+       <div class="carousel-caption">
+         <h2>01-03 October, 2018 / Chicago</h2>
+
+         <h1>35th CIB W78 2018 Conference </h1>
+
+         <p> IT in Design, Construction, and Management
+         Chicago, Illinois, United States</p>
+
+         <a class="btn btn-white inpage" href="#speakers">View Speakers</a>
+
+       </div>
+     </div>
+
+     <div class="item">
+       <img src="assets/images/backgrounds/bg10.jpg" alt="Chicago" style="width:100%;">
+       <div class="carousel-caption">
+         <h2>CHICAGO</h2>
+         <p>"The Most American place in America"</p>
+       </div>
+     </div>
+
+     <div class="item">
+       <img src="assets/images/backgrounds/bg9.jpg" alt="New York" style="width:100%;">
+       <div class="carousel-caption">
+         <h2>"Chicago's one of the rare places where architecture is more visible"</h2>
+         <p>- Frank Gehry</p>
+       </div>
+     </div>
+
+   </div>
+
+   <!-- Left and right controls -->
+   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+     <span class="glyphicon glyphicon-chevron-left"></span>
+     <span class="sr-only">Previous</span>
+   </a>
+   <a class="right carousel-control" href="#myCarousel" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>
+     <span class="sr-only">Next</span>
+   </a>
+ </div>
+</div>
+<div id="countdown" class="countdown">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <h3 class="section-title">Event Start</h3>
+            </div>
+            <div class="col-md-10">
+                <div id="defaultCountdown"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="about" class="section about">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <h3 class="section-title">About CIB</h3>
+
+                <p>CIB, officially named International Council for Research and Innovation in Building Construction, was established in 1953 under the name Conseil International du Bâtiment. The foundational objectives of CIB were to stimulate and facilitate the international cooperation and exchange of information between governmental research institutes in the building and construction sector, with an emphasis on those engaged in technical fields of research. Since its inception, the association has developed into a worldwide network that connects more than 5000 experts. These specialists represent the research institutes, universities, and industry- and government-related entities that constitute the approximate 500 member organizations of CIB. Though the size and strength of the organization today has grown compared to the past, the focus of CIB and its members remains the same: the active collection of research and innovation information for all aspects of building and construction.</p>
+
+                <!-- <figure>
+                    <img alt="" class="img-responsive" src="assets/images/about-us.jpg">
+                </figure> -->
+
+            </div><!-- /.col-sm-6 -->
+        <!--    <div class="col-sm-6">
+
+                <h3 class="section-title multiple-title">What is Our Goal?</h3>
+
+                <p>You've inspired new consumer, racked up click-thru's, blown-up brand enes. We can't give you back the
+                    weekends you worked, or erase the pain ebeing forced to make the logo bigger. But if you submit your
+                    best work we ajusts might be able to give the chance to show you best digital marketing.</p>
+
+                <ul class="list-arrow-right">
+
+                    <li>Learn from the best Asian Social Media Experts &amp; Case Studies</li>
+                    <li>Have dedicated 2-to-1 meetings with the experts</li>
+                    <li>Reach more consumers for less by learning new digital media skills</li>
+                    <li>Save money when spending in online advertising</li>
+
+                </ul>
+
+            </div> --> <!-- /.col-sm-6 -->
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+
+<section id="facts" class="bg-image-1 facts text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>2018<br>October 1st-3rd</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>Chicago<br>USA</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>400<br>Tickets</h3>
+            </div>
+            <!--<div class="col-sm-3">
+                <h3>02<br>Speakers</h3>
+            </div> -->
+        </div><!-- row -->
+    </div><!-- container -->
+</section>
+
+<section id="speakers" class="section speakers">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <h3 class="section-title"> Keynote Speakers</h3>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <div class="speaker">
+
+                    <figure>
+
+
+                        <img alt="" class="img-responsive center-block img-circle" src="assets/images/speakers/3.jpg">
+
+                   </figure>
+
+                    <h4>
+                    <a href="https://www.cmu.edu/cee/people/faculty/garrett.html" target="_blank">James H. Garrett, Jr.</a>
+                      </h4>
+
+
+                    <p>Dean, College of Engineering</p>
+
+                    <small>
+                      James H. Garrett, Jr. is the Dean of the College of Engineering at Carnegie Mellon University. He holds the Thomas Lord Professorship of Civil and Environmental Engineering.
+                    </small>
+
+                    <ul class="social-block">
+                        <li><a href="https://twitter.com/james_h_garrett" target="blank"><i class="ion-social-twitter"></i></a></li>
+                        <!-- <li><a href="#"><i class="ion-social-facebook"></i></a></li> -->
+                        <li><a href="https://www.linkedin.com/in/jameshgarrett/" target="_blank"><i class="ion-social-linkedin-outline"></i></a></li>
+                        <!-- <li><a href="#"><i class="ion-social-googleplus"></i></a></li> -->
+                    </ul>
+
+
+                </div><!-- /.speaker -->
+
+            </div><!-- /.col-md-4 -->
+
+            <div class="col-md-6 col-sm-6">
+                <div class="speaker">
+
+                    <figure>
+                        <img alt="" class="img-responsive center-block img-circle" src="assets/images/speakers/1.jpg">
+                    </figure>
+
+                    <h4>
+                      <a href="https://profiles.stanford.edu/martin-fischer/" target="_blank">Martin Fischer</a>
+
+                    </h4>
+
+
+                    <p>Professor, Civil and Environmental Engineering</p>
+
+                    <small>
+                      Martin Fisher is the Kumagai Professor of Engineering and Professor of Civil and Environmental Engineering at Stanford University. He also directs the Center for Integrated Facility Engineering(CIFE).
+                    </small>
+
+                    <ul class="social-block">
+                        <li><a href="https://twitter.com/fischermartin" target="_blank"><i class="ion-social-twitter"></i></a></li>
+                        <!-- <li><a href="#"><i class="ion-social-facebook"></i></a></li> -->
+                        <li><a href="https://www.linkedin.com/in/martin-fischer-5b314/" target="_blank"><i class="ion-social-linkedin-outline"></i></a></li>
+                        <!-- <li><a href="#"><i class="ion-social-googleplus"></i></a></li> -->
+                    </ul>
+
+                </div><!-- /.speaker -->
+            </div><!-- /.col-md-4 -->
+
+            </section>
+
+
+
+<section id="contribution" class="section bg-image-2 contribution">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-uppercase mt0 font-400">Registration is now Live</h3>
+
+                <p>We look forward to yet another excellent CIB W78 conference, and to the opportunity of welcoming you on behalf of Illinois Institute of Technology, Chicago.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="important-date" class="section important-date">
+    <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">Key Dates</h3>
+
+<!--
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                  <img src="assets/images/organization/a.jpg" alt="Image">
+                  <h5>ACCEPTANCE NOTIFICATION</h5> <h5>MARCH 19, 2018</h5>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <img src="assets/images/organization/r.png" alt="Image">
+                    <h5> REGISTRATION OPEN</h5> <h5>JUNE 10, 2018</h5>
+                  </div>
+
+
+
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                  <img src="assets/images/organization/su.png" alt="Image">
+                  <h5> PAPER SUBMISSION DUE</h5> <h5>JUNE 18, 2018</h5>
+                </div>
+ -->
+
+
+
+                    <!-- <img src="assets/images/organization/se.jpg" alt="Image">
+                    <! <h4> SELECTED</h4> <h4>May 01, 2018</h4>
+                    <img src="assets/images/organization/n.jpg" alt="Image">
+                      <h4> NOTIFICATION</h4> <h4>May 01, 2018</h4> -->
+
+                  <!-- <div class="col-sm-6 col-md-6 col-lg-6">
+                      <img src="assets/images/organization/d.png" alt="Image">
+                        <h5>REGISTRATION DEADLINE</h5> <h5>JUNE 25, 2018</h5>
+                      </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                        <img src="assets/images/organization/presentation.jpg" alt="Image" class="img-responsive img-circle">
+                          <h5> PRESENTATIONS DUE</h5> <h5>SEPT 01, 2018</h5>
+                        </div>
+
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                        <img src="assets/images/organization/conference.png" alt="Image" class="img-circle">
+                          <h5> CONFERENCE DAYS</h5> <h5>OCT 01-3rd, 2018</h5>
+                        </div> -->
+
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-timeline">
+                        <div class="timeline">
+                            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
+                            <span class="year">June 16</span>
+                            <div class="timeline-content">
+                                <h5 class="title">Early Bird Registration Open</h5>
+                                 <p class="description">
+                                    We highly encourge attendees to register as soon as possible. Seats are limited and we anticipate a high demand for tickets(registrations)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-icon"><i class="fa fa-globe"></i></div>
+                            <span class="year">June 25</span>
+                            <div class="timeline-content">
+                                <h5 class="title">Final Paper Submission</h5>
+                                <p class="description">
+                                    Detailed guidelines for the final paper submission are available through the following link: <b><u><a href="Info_author.html" target="_blank">Guidelines</a></u></b>
+                                </p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="timeline">
+                            <div class="timeline-icon"><i class="fa fa-send"></i></div>
+                            <span class="year">June 27</span>
+                            <div class="timeline-content">
+                                <h5 class="title">Deadline Author Registration</h5>
+                                <p class="description">
+                                  If you are an author, one author-registration per paper is required to include your paper in the proceedings.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-icon"><i class="fa fa-briefcase"></i></div>
+                            <span class="year">July 15</span>
+                            <div class="timeline-content">
+                                <h5 class="title">Regular Registration Open</h5>
+                                <p class="description">
+                                    Regular Registration will be open until Oct 1 or until we reach full capacity. We encourage you to register as soon as possible to secure a seat.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- <div class="timeline">
+                            <div class="timeline-icon"><i class="fa fa-gear"></i></div>
+                            <span class="year">September 01</span>
+                            <div class="timeline-content">
+                                <h5 class="title">Presentations Due</h5>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis felis vitae risus pulvinar tincidunt. Nam ac venenatis enim. Aenean hendrerit justo sed.
+                                </p>
+                            </div>
+                        </div> -->
+                        <div class="timeline">
+                            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
+                            <span class="year">October 01 - 03</span>
+                            <div class="timeline-content">
+                                <h5 class="title">Conference Days</h5>
+                                <p class="description">
+                                  Save the dates! Join us at Hotel Sheraton Grand, Chicago to find out what exciting developments are active in the aspects of research and innovation for building and construction.
+
+                                </p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <div class="row">
+            <div class="col-md-12">
+                <!-- <table style="width:100%">
+                    <tr>
+                        <th rowspan="2">Paper Abstracts</th>
+                        <td>Open</td>
+                        <td>Acceptance Notification</td>
+
+                    </tr>
+                    <tr>
+                        <td style="color:red";><b>January 10, 2018</td>
+                        <td style="color:red";><b>By March 19, 2018</td>
+
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Full papers</th>
+                        <td>Submission</td>
+                        <td>Acceptance Notification</td>
+
+                    </tr>
+                    <tr>
+
+                      <td style="color:red";><b>By April 28, 2018</td>
+                        <td style="color:green";><b>By June 10, 2018</td>
+
+                    </tr>
+
+                    <tr>
+                        <th rowspan="2">Author Registration</th>
+                        <td>Open</td>
+                        <td>Deadline</td>
+
+                    </tr>
+                    <tr>
+
+                      <td style="color:red";><b>On May 01, 2018</td>
+                        <td style="color:green";><b>By June 15, 2018</td>
+
+                    </tr>
+
+                </table> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="partner" class="section partner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">Conference Organisation</h3>
+
+
+                <div class="row organization nopadding">
+                  <!-- <div class="col-sm-1 col-md-1 col-lg-1"></div> -->
+<!--
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <h4 class="text-success">Organization Committee</h4>
+                        David Arditi, IIT, USA <br>
+                        Robert Amor, University of Auckland, New Zeland <br>
+                        Jacob Beetz, Tech Eindhoven, Netherlands <br>
+                        Bill East, Prairie Sky Consulting, USA <br>
+                        Timo Hartmann, TU Berlin, Germany <br>
+                        Raymond Issa, University of Florida, USA <br>
+                        Ivan Mutis, IIT, USA <br>
+                    </div>
+-->     <h4 class="text-success">&nbsp;&nbsp;&nbsp;&nbsp;Organization</h4>
+                <div class="row"> <div class="col-sm-6 col-md-6 col-lg-6">
+                    <center>
+                         <!-- <img src="assets/images/organization/david.jpg" alt="Image" class="img-responsive img-circle"> -->
+                         <a href="https://engineering.iit.edu/faculty/david-arditi/" target="_blank">
+                            David Arditi - arditi@iit.edu <br>
+                         <b>Chair</b> </a> <br></center>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6"><center>
+                        <!-- <img src="assets/images/organization/bill.jpeg" alt="Image" class="img-responsive img-circle"> -->
+                          <a href="https://www.linkedin.com/in/williameast/" target="_blank">
+                          Bill East - bill.east@prairieskyconsulting.com <br>
+
+                        <b>Co-Chair</b> <br></center></a>
+                      </div>
+
+                  </div>
+
+                    <a class="js-scroll-trigger text-success" href="" data-toggle="modal" data-target="#myModal">
+                         <h4 class="text-success">&nbsp;&nbsp;&nbsp;&nbsp;Scientific Committee</h4>
+                       </a>
+
+                         <div class-"row">
+                            <div class="col-sm-6 col-md-6 col-lg-6 nopadding ">
+                            <center>
+                            <!-- <img src="assets/images/organization/ivan_mutis.jpg" alt="Image" class="img-responsive img-circle"> -->
+                              <a href="https://engineering.iit.edu/faculty/ivan-mutis/" target="_blank">
+                      Ivan Mutis, IIT, USA <br>
+                           <b>Chair</b> </a> <br>   <center>
+                         </div>
+                          <div class="col-sm-6 col-md-6 col-lg-6 nopadding ">
+                                <center>
+                                                  <!-- <img src="assets/images/organization/timo_hartmann.png" alt="Image" class="img-responsive img-circle"> -->
+                                                    <a href="http://www.civilsystems.tu-berlin.de/menue/ueber_uns/personen/prof_timo_hartmann/" target="_blank">
+                                                Timo Hartmann, TU Berlin, Germany <br>
+                                                <b>Co-Chair</b> </a> <br>
+                                                  <center>
+
+
+                </div>
+              </diV>
+                </div>
+
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-sm-3">
+                <a class="partner-box partner-box-1"></a>
+            </div>
+            <div class="col-sm-3">
+                <a class="partner-box partner-box-2"></a>
+            </div>
+            <div class="col-sm-3">
+                <a class="partner-box partner-box-3"></a>
+            </div>
+            <div class="col-sm-3">
+                <a class="partner-box partner-box-4"></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <a class="partner-box partner-box-5"></a>
+            </div>
+            <div class="col-sm-3">
+                <a class="partner-box partner-box-6"></a>
+            </div>
+            <div class="col-sm-3">
+                <a class="partner-box partner-box-7"></a>
+            </div>
+            <div class="col-sm-3">
+                <a class="partner-box partner-box-8"></a>
+            </div> -->
+        </div>
+
+</section>
+
+    <!-- <div class="container organization-committee-members">
+    <div class="col-md-12">
+        <div class="row">
+            <h2 style="text-align:center;">Organization committee</h2>
+        </div>
+
+        <div class="well">
+            <div id="myCarousel1" class="carousel slide">
+
+                 Carousel items -->
+                <!-- <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                          <div class="col-sm-3"><img src="assets/images/organization/david.jpg" alt="Image" class="img-responsive img-circle"></a>
+                            <a href="https://engineering.iit.edu/faculty/david-arditi/" target="_blank">
+                              <h4 style="text-align:center">David Arditi </h4>
+                              <h5 style="text-align:center">IIT Chicago, USA</h5>
+                              </a>
+                          </div>
+
+                          <div class="col-sm-3"><img src="assets/images/organization/bill.jpeg" alt="Image" class="img-responsive img-circle"></a>
+                            <a href="https://www.linkedin.com/in/williameast/" target="_blank">
+                          <h4 style="text-align:center">Bill East </h4>
+                          <h5 style="text-align:center">Prairie Sky Consulting, USA</h5>
+                          </a>
+                          </div>
+
+
+
+
+                          <div class="col-sm-3"><img src="assets/images/organization/robert_amor.jpg" alt="Image" class="img-responsive img-circle"></a>
+                            <a href="https://www.cs.auckland.ac.nz/~trebor/" target="_blank">
+                              <h4 style="text-align:center">Robert Amor </h4>
+                              <h5 style="text-align:center">University of Auckland, New Zealand</h5>
+                              </a>
+                          </div>
+
+
+                      <div class="col-sm-3"><img src="assets/images/organization/Issa1.jpg" alt="Image" class="img-responsive img-circle"></a>
+                                <a href="https://dcp.ufl.edu/faculty/issa-r-raymond/" target="_blank">
+                                  <h4 style="text-align:center">Raymond Issa </h4>
+                                  <h5 style="text-align:center">University of Florida, USA</h5>
+                                  </a>
+                          </div>
+
+
+
+
+
+                        </div>
+                        <!/row-->
+                    <!-- </div>
+                    <!/item-->
+
+                    <!--/item-->
+                    <!-- <div class="item">
+                        <div class="row"> -->
+
+                          <!-- <div class="col-sm-3"><img src="assets/images/organization/timo_hartmann.png" alt="Image" class="img-responsive img-circle"></a>
+                            <a href="http://www.civilsystems.tu-berlin.de/menue/ueber_uns/personen/prof_timo_hartmann/" target="_blank">
+                              <h4 style="text-align:center">Timo Hartmann </h4>
+                              <h5 style="text-align:center">TU Berlin, Germany</h5>
+                              </a>
+                          </div> -->
+
+                                                       <!-- <div class="col-sm-3"><img src="assets/images/organization/jacob.jpg" alt="Image" class="img-responsive img-circle"></a>
+                                                        <a href="https://www.tue.nl/en/university/departments/built-environment/the-department-of-the-built-environment/staff/detail/ep/e/d/ep-uid/20031316/ep-tab/4/" target="_blank">
+                                                          <h4 style="text-align:center">Jacob Beetz </h4>
+                                                          <h5 style="text-align:center">Tech Eindhoven, Netherlands</h5>
+                                                          </a>
+                                                      </div> -->
+
+<!--
+                            <div class="col-sm-3"><img src="assets/images/organization/ivan_mutis.jpg" alt="Image" class="img-responsive img-circle"></a>
+                              <a href="https://engineering.iit.edu/faculty/ivan-mutis/" target="_blank">
+                                <h4 style="text-align:center">Ivan Mutis </h4>
+                                <h5 style="text-align:center">IIT Chicago, USA</h5>
+                                </a>
+                            </div> -->
+
+                        <!-- </div>
+                        /row-->
+                    <!-- </div>
+                    </item-->
+                <!-- </div>
+                <!/carousel-inner--> <a class="left carousel-control" href="#myCarousel1" data-slide="prev"></a>
+
+                <!-- <a class="right carousel-control" href="#myCarousel1" data-slide="next">›</a>
+            </div>
+            <!/myCarousel-->
+        <!-- </div> -->
+        <!--/well-->
+    <!-- </div>
+</div> -->
+
+
+<!-- <section id="sponsorship" class="section sponsorship">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">Sponsorship</h3>
+            </div>
+        </div>
+        <div class="sponsors">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="assets/images/sponsor/iitlogo1.png" alt="" class="img-responsive">
+                     <h5 class="sponsor-caption">Platinum </h5> -->
+                <!-- </div>
+                <div class="col-md-4">
+                    <img src="assets/images/sponsor/cibsponsor.png" alt="" class="img-responsive">
+                    < <h5 class="sponsor-caption">Gold </h5> -->
+                <!-- </div>
+                <div class="col-md-4">
+                    <img src="assets/images/sponsor/s-3.png" alt="" class="img-responsive">
+                     <h5 class="sponsor-caption">Silver </h5> -->
+                <!-- </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section id="faq" class="section faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">Event FAQ<span>s</span></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a class="faq-toggle collapsed" role="button" data-toggle="collapse"
+                                   data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                                   aria-controls="collapseOne"> How can I register? What are the registration rates ?</a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                Registration is now live. Please follow the <b><u><a href="Registration.html">Registration Link</a></u></b> for instructions and rates.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="faq-toggle collapsed" role="button" data-toggle="collapse"
+                                   data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                   aria-controls="collapseTwo"> Can I advertise/sponsor in the conference program ?</a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingTwo">
+                            <div class="panel-body">Yes, it is possible. There are currently opportunities for sponsorship. Please contact Prof. Ivan Mutis (imutissi@iit.edu) for more information. </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="faq-toggle collapsed" role="button" data-toggle="collapse"
+                                   data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                   aria-controls="collapseThree"> I am an overseas participant and need a letter of invitation before I can receive my visa. What is the procedure ?</a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingThree">
+                            <div class="panel-body">Please email Prof. David Arditi (arditi@iit.edu) or Prof. Ivan Mutis (imutissi@iit.edu ) to request an invitation letter.</div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="faq-toggle collapsed" role="button" data-toggle="collapse"
+                                   data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                                   aria-controls="collapseFour"> Is there funding available to help with travel/registration costs ?</a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingFour">
+                            <div class="panel-body">CIB is unable to assist with travel or registration costs.</div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="faq-toggle collapsed" role="button" data-toggle="collapse"
+                                   data-parent="#accordion" href="#collapseFive" aria-expanded="false"
+                                   aria-controls="collapseFive"> My question is not listed here. Whom do I contact ?</a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingFive">
+                            <div class="panel-body">Please contact Prof. David Arditi (arditi@iit.edu) or CIB Team (cibw78@iit.edu) for assistance.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="venue1">
+
+  <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+     <!-- Indicators -->
+     <ol class="carousel-indicators">
+       <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+       <li data-target="#myCarousel2" data-slide-to="1"></li>
+       <li data-target="#myCarousel2" data-slide-to="2"></li>
+     </ol>
+
+     <!-- Wrapper for slides -->
+     <div class="carousel-inner">
+
+       <div class="item active">
+         <img src="assets/images/backgrounds/ps.jpg" alt="Los Angeles" style="width:100%;">
+
+         <div class="carousel-caption">
+             <h3>Hotel: Sheraton Grand Chicago, Illinois</h3>
+             <p>A block of rooms has been reserved at Sheraton Grand Chicago. Please follow this link to access the conference rate and secure your reservations:</p>
+             <p style="text-align:center;"><a class="book-now-btn" target="_blank" href="http://www.sheratonchicago.com/">CLICK HERE TO BOOK</a></p>
+         </div>
+       </div>
+
+       <div class="item">
+         <img src="assets/images/backgrounds/dr.jpg" alt="Chicago" style="width:100%;">
+
+       </div>
+
+       <div class="item">
+         <img src="assets/images/backgrounds/cl.jpg" alt="New York" style="width:100%;">
+
+       </div>
+
+     </div>
+
+     <!-- Left and right controls -->
+     <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span>
+       <span class="sr-only">Previous</span>
+     </a>
+     <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+       <span class="glyphicon glyphicon-chevron-right"></span>
+       <span class="sr-only">Next</span>
+     </a>
+   </div>
+  </div>
+</section>
+
+
+
+
+
+    <!-- <div class="venue-content">
+      <h3>Hotel: Sheraton Grand Chicago, Illinois</h3>
+      <p>A block of rooms has been reserved at Sheraton Grand Chicago. Please follow this link to access the conference rate and secure your reservations:</p>
+      <p style="text-align:center;"><a class="book-now-btn" target="_blank" href="http://www.sheratonchicago.com/">CLICK HERE TO BOOK</a></p>
+    </div> -->
+
+<!--
+<section id="photos" class="section photos">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">Photos</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="grid">
+
+                    <li class="grid-item grid-item-sm-6">
+                        <div class="photo-overlay">
+                            <h2>
+                                Skilet Album Cover
+                            </h2>
+                            <p class="photo-catagory">
+                                Business / Fashion
+                            </p>
+                            <a class="gallery-item" href="assets/images/photos/photos-1.jpg"
+                               data-lightbox-gallery="photos">
+                                <div class="btn btn-default classic-button">view</div>
+                            </a>
+                        </div>
+                        <img alt="" class="img-responsive center-block" src="assets/images/photos/photos-1.jpg">
+                    </li>
+
+                    <li class="grid-item grid-item-sm-3">
+                        <div class="photo-overlay">
+                            <h2>
+                                Skilet Album Cover
+                            </h2>
+                            <p class="photo-catagory">
+                                Business / Fashion
+                            </p>
+                            <a class="gallery-item" href="assets/images/photos/photos-2.jpg"
+                               data-lightbox-gallery="photos">
+                                <div class="btn btn-default classic-button">view</div>
+                            </a>
+                        </div>
+                        <img alt="" class="img-responsive center-block" src="assets/images/photos/photos-2.jpg">
+                    </li>
+
+                    <li class="grid-item grid-item-sm-3">
+                        <div class="photo-overlay">
+                            <h2>
+                                Skilet Album Cover
+                            </h2>
+                            <p class="photo-catagory">
+                                Business / Fashion
+                            </p>
+                            <a class="gallery-item" href="assets/images/photos/photos-3.jpg"
+                               data-lightbox-gallery="photos">
+                                <div class="btn btn-default classic-button">view</div>
+                            </a>
+                        </div>
+                        <img alt="" class="img-responsive center-block" src="assets/images/photos/photos-3.jpg">
+                    </li>
+
+                    <li class="grid-item grid-item-sm-3">
+                        <div class="photo-overlay">
+                            <h2>
+                                Skilet Album Cover
+                            </h2>
+                            <p class="photo-catagory">
+                                Business / Fashion
+                            </p>
+                            <a class="gallery-item" href="assets/images/photos/photos-5.jpg"
+                               data-lightbox-gallery="photos">
+                                <div class="btn btn-default classic-button">view</div>
+                            </a>
+                        </div>
+                        <img alt="" class="img-responsive center-block" src="assets/images/photos/photos-5.jpg">
+                    </li>
+
+                    <li class="grid-item grid-item-sm-3">
+                        <div class="photo-overlay">
+                            <h2>
+                                Skilet Album Cover
+                            </h2>
+                            <p class="photo-catagory">
+                                Business / Fashion
+                            </p>
+                            <a class="gallery-item" href="assets/images/photos/photos-6.jpg"
+                               data-lightbox-gallery="photos">
+                                <div class="btn btn-default classic-button">view</div>
+                            </a>
+                        </div>
+                        <img alt="" class="img-responsive center-block" src="assets/images/photos/photos-6.jpg">
+                    </li>
+
+                    <li class="grid-item grid-item-sm-3">
+                        <div class="photo-overlay">
+                            <h2>
+                                Skilet Album Cover
+                            </h2>
+                            <p class="photo-catagory">
+                                Business / Fashion
+                            </p>
+                            <a class="gallery-item" href="assets/images/photos/photos-7.jpg"
+                               data-lightbox-gallery="photos">
+                                <div class="btn btn-default classic-button">view</div>
+                            </a>
+                        </div>
+                        <img alt="" class="img-responsive center-block" src="assets/images/photos/photos-7.jpg">
+                    </li>
+
+                    <li class="grid-item grid-item-sm-3">
+                        <div class="photo-overlay">
+                            <h2>
+                                Skilet Album Cover
+                            </h2>
+                            <p class="photo-catagory">
+                                Business / Fashion
+                            </p>
+                            <a class="gallery-item" href="assets/images/photos/photos-8.jpg"
+                               data-lightbox-gallery="photos">
+                                <div class="btn btn-default classic-button">view</div>
+                            </a>
+                        </div>
+                        <img alt="" class="img-responsive center-block" src="assets/images/photos/photos-8.jpg">
+                    </li>
+
+                    <li class="grid-item grid-item-sm-3">
+                        <div class="photo-overlay">
+                            <h2>
+                                Skilet Album Cover
+                            </h2>
+                            <p class="photo-catagory">
+                                Business / Fashion
+                            </p>
+                            <a class="gallery-item" href="assets/images/photos/photos-9.html"
+                               data-lightbox-gallery="photos">
+                                <div class="btn btn-default classic-button">view</div>
+                            </a>
+                        </div>
+                        <img alt="" class="img-responsive center-block" src="assets/images/photos/photos-2.jpg">
+                    </li>
+
+                    <li class="grid-item grid-item-sm-3">
+                        <div class="photo-overlay">
+                            <h2>
+                                Skilet Album Cover
+                            </h2>
+                            <p class="photo-catagory">
+                                Business / Fashion
+                            </p>
+                            <a class="gallery-item" href="assets/images/photos/photos-3.jpg"
+                               data-lightbox-gallery="photos">
+                                <div class="btn btn-default classic-button">view</div>
+                            </a>
+                        </div>
+                        <img alt="" class="img-responsive center-block" src="assets/images/photos/photos-3.jpg">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section id="location" class="section location">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3 class="section-title">Event Location</h3>
+                <address>
+                    <p>Sheraton Grand Chicago<br> 301 E North Water St<br> Chicago<br>Illinois <br> Phone:
+                        +1 (312) 464-1000<br> Email: info@sheratonchicago.com</p>
+                </address>
+            </div>
+            <div class="col-sm-9" id="map">
+                <iframe class="map_canvas"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.1731726965045!2d-87.62191038455855!3d41.88913267922138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca9ef45c823%3A0xba6bddb06ea558a1!2sSheraton+Grand+Chicago!5e0!3m2!1sen!2sus!4v1528889332979"
+                    width="100%" height="280" frameborder="0" style="border:0" allowfullscreen>
+                </iframe>
+
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2972.6944549100426!2d-87.62919458523024!3d41.83487707609814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c72d3e9a80f%3A0x91cbe4661afb6f1a!2sIllinois+Institute+of+Technology!5e0!3m2!1sen!2sus!4v1524001120282" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+            </div>
+        </div>
+
+          <div class="row mt60">
+            <div id="contact" class="col-md-12">
+                <h3 class="section-title ">Contact Us</h3>
+            </div>
+             <div class="row organization nopadding">
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <h4 class="text-success">General enquiries </h4>
+        <b>David Arditi - arditi@iit.edu </b> <br>
+        <small>Professor Department of Civil, Architectural,
+            and Environmental Engineering <br>
+            Illinois Institute of Technology <br>
+            Chicago, Illinois <br>
+        </small>
+    </div>
+     <div class="col-sm-4 col-md-4 col-lg-4">
+        <h4 class="text-success">Scientific and technical paper related queries</h4>
+            <b>Ivan Mutis - imutissi@iit.edu </b> <br>
+        <small>Assistant Professor Department of Civil, Architectural, and Environmental Engineering <br>Illinois
+            Institute of Technology
+            Chicago, Illinois
+        </small>
+        <br>
+        <b> Timo Hartmann - timo.hartmann@tu-berlin.de </b> <br>
+        <small> Professor for Civil Systems Engineering<br>Civil Engineering Institute TU Berlin</small>
+    </div>
+    <div class="col-sm-3 col-md-3 col-lg-3 nopadding ">
+        <h4 class="text-success">Sponsorship and break presentation opportunities</h4>
+        <b>Ivan Mutis - imutissi@iit.edu </b> <br>
+    <small>Assistant Professor Department of Civil, Architectural, and Environmental Engineering <br>Illinois
+        Institute of Technology
+        Chicago, Illinois
+    </small>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="site-info">Copyright © CIB 2018<br>
+                    Developed by <i><u><a href="https://www.linkedin.com/in/shashank-yammanur/" target="_blank">
+                       Shashank Yammanur<b>
+                </p>
+
+                <ul class="social-block">
+                    <li><a href="https://twitter.com/cibworld_nl" target="_blank"><i class="ion-social-twitter"></i></a></li>
+                    <!-- <li><a href="#"><i class="ion-social-facebook"></i></a></li> -->
+                    <li><a href="https://www.linkedin.com/groups/3696967/profile" target="_blank"><i class="ion-social-linkedin-outline"></i></a></li>
+                    <!-- <li><a href="#"><i class="ion-social-googleplus"></i></a></li> -->
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- script -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/countdown/jquery.plugin.min.js"></script>
+<script src="bower_components/countdown/jquery.countdown.min.js"></script>
+<script src="bower_components/nivo-lightbox/nivo-lightbox.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.js">
+</script>
+<script src="assets/js/grayscale.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+</body>
+
+
+</html>
